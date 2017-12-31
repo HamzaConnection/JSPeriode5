@@ -12,8 +12,8 @@ function fetchPerson(url) {
 async function printNames() {
     var start = now();
     console.log("Before");
-    const p1 = fetchPerson(URL.concat(1)); // put await to make the run sequentially
-    const p2 = fetchPerson(URL.concat(2)); // conclusion it's much faster when they run parallel
+    const p1 =   fetchPerson(URL.concat(1)); // put await to make the run sequentially
+    const p2 =   fetchPerson(URL.concat(2)); // conclusion it's much faster when they run parallel
     const person1 = await p1;
     const person2 = await p2;
     console.log(person1.name);
@@ -26,3 +26,13 @@ async function printNames() {
 }
 
 printNames();
+ /*
+ without async 
+start: 142.183
+stop: 1003.860
+ */
+/*
+with async
+start: 133.187
+stop: 1943.941
+*/

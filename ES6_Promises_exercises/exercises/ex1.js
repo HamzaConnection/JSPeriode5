@@ -1,4 +1,4 @@
-// assignment b
+// assignment b callback hell
 const crypto = require('crypto');
 console.log('Assignment b')
 crypto.randomBytes(48, (err, buf) => {
