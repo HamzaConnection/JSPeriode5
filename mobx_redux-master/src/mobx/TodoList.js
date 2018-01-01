@@ -41,11 +41,6 @@ class TodoView extends React.Component {
           onChange={this.onToggleCompleted}
         />
         {todo.task}
-        {todo.assignee
-          ? <small>{todo.assignee.name}</small>
-          : null
-        }
-
       </li>
     );
   }
